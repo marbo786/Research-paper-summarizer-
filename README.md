@@ -1,4 +1,3 @@
-# Research-paper-summarizer-
 # 🧠 Research Paper Summarizer (Model-Agnostic Framework)
 
 This is a flexible and extensible framework for summarizing academic research papers (PDFs). Unlike rigid tools that lock you into a single model or API, this app lets you plug in **any LLM or summarization API you prefer**, while keeping the backend processing intact.
@@ -13,5 +12,6 @@ This is a flexible and extensible framework for summarizing academic research pa
 
 ---
 
+## Project status
 
-
+The PDF extraction, chunking, and Streamlit interface are present. OpenAI and Hugging Face adapters are included. Live summaries require a configured model and provider key; summaries should be checked against the source paper.

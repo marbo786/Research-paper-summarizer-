@@ -1,4 +1,7 @@
-# config.py
-API_PROVIDER = "openai"  # or "huggingface", "anthropic", etc.
-API_KEY = "your-api-key-here"
-MODEL_NAME = "gpt-3.5-turbo-16k"  # or any other model ID
+import os
+
+API_PROVIDER = os.getenv("API_PROVIDER", "openai").strip().lower()
+API_KEY = os.getenv("API_KEY") or os.getenv(
+    "HF_TOKEN" if API_PROVIDER == "huggingface" else "OPENAI_API_KEY", ""
+)
+MODEL_NAME = os.getenv("MODEL_NAME", "")
